@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "public": false,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "server.js"
+    },
+    {
+      "src": "/download",
+      "dest": "server.js"
+    },
+    {
+      "src": "/game.apk",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
